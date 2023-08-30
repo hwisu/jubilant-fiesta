@@ -1,6 +1,7 @@
-import {BaseEntity, CreateDateColumn, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {BaseEntity, CreateDateColumn, Entity, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import { School } from "../schools";
 import { Notice } from "./notices/notices";
+import {Subscription} from "../student/subscription";
 
 @Entity()
 export class Page extends BaseEntity {
@@ -20,6 +21,11 @@ export class Page extends BaseEntity {
     )
     notices!: Notice[];
 
+    @ManyToMany(
+        (type) => Subscription,
+        (subscription) => subscription.page
+    )
+    subscriptions!: Subscription[]
 
     @CreateDateColumn()
     createdAt!: Date

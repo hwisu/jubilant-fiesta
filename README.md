@@ -94,3 +94,5 @@ npm run start
   * schoolId: integer, nullable
 * 성공시 200 응답과 함께 구독한 학교의 소식을 내려줍니다. (최신순)
 
+
+TODO : auth logics, total count call api
