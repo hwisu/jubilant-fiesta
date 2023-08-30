@@ -95,4 +95,4 @@ npm run start
 * 성공시 200 응답과 함께 구독한 학교의 소식을 내려줍니다. (최신순)
 
 
-TODO : auth logics, total count call api
+TODO : auth logics, total count call api, 컨트롤러에서 모델을 직접 콜하는 부분 제거

@@ -3,7 +3,7 @@ import { Notice } from "../../models/entities/school-root/page/notices/notices";
 
 
 // 뉴스 생성
-export const postNotice  = async (notice: DeepPartial<Notice>) => {
+export const createNotice  = async (notice: DeepPartial<Notice>) => {
     return Notice.create(notice).save()
 }
 
