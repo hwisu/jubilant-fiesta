@@ -31,7 +31,7 @@ npm run start
 
 ### 학교 소식 발행
 
-### POST `/pages/{pageId}/news`
+### POST `/pages/{pageId}/notices`
 * application/json
 * 성공시 200 응답과 함께 작성된 소식의 id(integer)를 응답으로 돌려줍니다.  
 
@@ -40,7 +40,7 @@ npm run start
   | body        | {"id": 123} |
 
 ### 학교 소식 삭제
-### DELETE `/news/{newsId}`
+### DELETE `/notices/{noticeId}`
 * application/json
 * 성공시 204 응답을 돌려줍니다.  
 
@@ -49,14 +49,14 @@ npm run start
   | body        | |
 
 ### 학교 소식 수정
-### PATCH `/news/{newsId}`
+### PATCH `/notices/{noticeId}`
 * application/json
 * body
     * {
       "title": "이렇게 해보는건 어떨까요?",
       "content": "ㅁㄴㅇㄹ"
       }
-* 성공시 200 응답과 함께 변경된 news를 내려줍니다.  
+* 성공시 200 응답과 함께 변경된 notice를 내려줍니다.  
 
   | http status | 200 |
   |-------------|-----|
@@ -86,7 +86,7 @@ npm run start
   | body        | |
 
 ### 학교 페이지별 소식 조회
-### GET `/students/{studentId}/news?schoolId={schoolId}&page={page}&size={size}`
+### GET `/students/{studentId}/notices?schoolId={schoolId}&page={page}&size={size}`
 
 * query parameter
   * page: integer, nullable
